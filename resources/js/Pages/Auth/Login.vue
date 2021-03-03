@@ -8,7 +8,7 @@
     <form @submit.prevent="submit">
         <div>
             <breeze-label for="email" value="Email" />
-            <breeze-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+            <breeze-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" placeholder="email"/>
         </div>
 
         <div class="mt-4">
@@ -31,6 +31,14 @@
             <breeze-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                 Log in
             </breeze-button>
+
+
+        </div>
+
+        <div class="my-10">
+             <a href="/login/github" class="ml-4" >
+                Log in with github
+            </a>
         </div>
     </form>
 </template>
