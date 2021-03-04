@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use Socialite;
 
 class SocialLoginController extends Controller {
+
+	public function __construct() {
+		$this->middleware(['social', 'guest']);
+	}
 	//
 	public function redirect($service, Request $request) {
 		return Socialite::driver($service)->redirect();
