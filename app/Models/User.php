@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\UserSocial;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -40,4 +40,12 @@ class User extends Authenticatable {
 	protected $casts = [
 		'email_verified_at' => 'datetime',
 	];
+
+	public function social() {
+		return $this->hasMany(UserSocial::class);
+	}
+
+	public function hasSocialLinked($service) {
+		return $this->social('service', $service)->count();
+	}
 }
