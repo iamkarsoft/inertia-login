@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Auth\SocialLoginController;
 use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Socialite\Facades\Socialite;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,5 +53,8 @@ Route::get('/login/github/callback', function () {
 	auth()->login($user, true);
 	return redirect('dashboard');
 });
+
+Route::get('/login/{service}', [SocialLoginController::class, 'redirect'])->name('social.auth');
+Route::get('/login/{service}/callback', [SocialLoginController::class, 'callback'])->name('social.callback');
 
 require __DIR__ . '/auth.php';
