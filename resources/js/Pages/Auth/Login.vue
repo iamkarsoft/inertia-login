@@ -36,8 +36,16 @@
         </div>
 
         <div class="my-10">
-             <a href="/login/github" class="ml-4" >
-                Log in with github
+            <a :href="github" class="ml-4 mx-4" >
+                 github
+            </a>
+
+            <a :href="twitter" class="ml-4 mx-4" >
+                twitter
+            </a>
+
+             <a :href="facebook" class="ml-4 mx-4" >
+                 facebook
             </a>
         </div>
     </form>
@@ -64,7 +72,8 @@
 
         props: {
             canResetPassword: Boolean,
-            status: String
+            status: String,
+
         },
 
         data() {
@@ -73,7 +82,10 @@
                     email: '',
                     password: '',
                     remember: false
-                })
+                }),
+                twitter: '/login/twitter',
+                facebook: '/login/facebook',
+                github: '/login/github',
             }
         },
 

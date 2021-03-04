@@ -1,11 +1,16 @@
 <?php
 
+return [
 
-retur[
-
-    'services'=>[
-        'github'=>[
-            'name'=>'Github',
-        ]
-    ]
-]
+	'services' => [
+		'github' => [
+			'name' => 'GitHub',
+		],
+		'twitter' => [
+			'name' => 'Twitter',
+		],
+		'facebook' => [
+			'name' => 'Facebook',
+		],
+	],
+];
