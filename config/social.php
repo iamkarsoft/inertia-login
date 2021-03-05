@@ -12,5 +12,9 @@ return [
 		'facebook' => [
 			'name' => 'Facebook',
 		],
+		'google' => [
+			'name' => 'Google',
+		],
+
 	],
 ];

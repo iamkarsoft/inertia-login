@@ -44,8 +44,12 @@
                 twitter
             </a>
 
-             <a :href="facebook" class="ml-4 mx-4" >
-                 facebook
+            <a :href="facebook" class="ml-4 mx-4" >
+                facebook
+            </a>
+
+            <a :href="google" class="ml-4 mx-4" >
+                google
             </a>
         </div>
     </form>
@@ -86,6 +90,7 @@
                 twitter: '/login/twitter',
                 facebook: '/login/facebook',
                 github: '/login/github',
+                google: '/login/google',
             }
         },
 
